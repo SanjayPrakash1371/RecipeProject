@@ -1,0 +1,28 @@
+<body>
+  <div class="add-new-movie">
+    <app-forms-example> </app-forms-example>
+  </div>
+  <div class="movielist">
+    <div class="container" *ngFor="let movie of moviesList">
+      <img src="{{ movie.poster }}" alt="{{ movie.name }}" class="flag" />
+      <div class="info">
+        <h2>
+          {{ movie.name }}<span style="float: right">✨{{ movie.rating }}</span>
+        </h2>
+        <!-- <button (click)="increment(movie)">Like👍{{ movie.like }}</button>
+        <button (click)="decrement(movie)" style="float: right">
+          DisLike🤤👎{{ movie.dislike }}
+        </button> -->
+        <button (click)="toggle(movie)">Toggle Button</button>
+        <p *ngIf="movie.toggle">{{ movie.summary }}</p>
+        <div>
+          <button (click)="deleteMovies(movie)">Delete😒</button>
+        </div>
+
+        <div style="justify-content: space-between; padding-top: 10px">
+          <app-counter></app-counter>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

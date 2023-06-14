@@ -1,0 +1,8 @@
+<body>
+  <input type="text" [style.backgroundColor]="clr" [(ngModel)]="clr" />
+  <button (click)="add()">Add</button>
+
+  <div *ngFor="let col of colors">
+    <div class="colorbox" [style.backgroundColor]="col"></div>
+  </div>
+</body>

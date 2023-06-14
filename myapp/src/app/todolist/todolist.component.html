@@ -1,0 +1,21 @@
+<p>todolist works!</p>
+<input type="text" [(ngModel)]="task" />
+<button *ngIf="!isEdited" (click)="add()">Add</button>
+<button *ngIf="isEdited" (click)="addEdited()">Edited ToDo</button>
+<div *ngFor="let t of todoList">
+  <input type="checkbox" (click)="strike(t)" />
+  <label class="strikeText"
+    >{{ t.text }}<button (click)="del(t)">Delete</button
+    ><button (click)="edit(t)">Edit</button></label
+  >
+
+  <!-- <label *ngIf="t.check == false"
+    >{{ t.text }}<button (click)="del(t)">Delete</button
+    ><button (click)="edit(t)">Edit</button></label
+  >
+  <label *ngIf="t.check == true"
+    ><s>{{ t.text }}</s
+    ><button (click)="del(t)">Delete</button
+    ><button (click)="edit(t)">Edit</button></label
+  > -->
+</div>

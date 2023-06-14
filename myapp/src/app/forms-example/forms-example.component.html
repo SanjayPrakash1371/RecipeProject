@@ -1,0 +1,44 @@
+<form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+  <div class="form-fields">
+    <input
+      type="text"
+      placeholder=" Movie Name"
+      formControlName="movieName"
+    /><br />
+    <div *ngIf="movieName?.invalid && movieName?.touched">
+      <p *ngIf="movieName?.errors">Required</p>
+    </div>
+  </div>
+  <div class="form-fields">
+    <input type="text" placeholder=" Url " formControlName="poster" /><br />
+    <!-- {{ poster?.errors | json }} -->
+    <div *ngIf="poster?.invalid && poster?.touched">
+      <p *ngIf="poster?.errors?.['required']">Required</p>
+      <p *ngIf="poster?.errors?.['pattern']">Invalid</p>
+    </div>
+  </div>
+
+  <div class="form-fields">
+    <input type="number" placeholder="Rating" formControlName="rating" /><br />
+    <div *ngIf="rating?.invalid && rating?.touched">
+      <p *ngIf="rating?.errors?.['required']">Required</p>
+      <p *ngIf="rating?.errors?.['max']">Maximum 10</p>
+      <p *ngIf="rating?.errors?.['min']">Minimum 1</p>
+    </div>
+  </div>
+  <div class="form-fields">
+    <input
+      type="text"
+      placeholder=" Summary "
+      formControlName="summary"
+    /><br />
+    <div *ngIf="summary?.invalid && summary?.touched">
+      <p *ngIf="summary?.errors?.['required']">Required</p>
+      <p *ngIf="summary?.errors?.['minlength']">Minimum 10</p>
+    </div>
+  </div>
+
+  <div class="form-fields">
+    <button type="submit" [disabled]="!movieForm.valid">Submit</button>
+  </div>
+</form>
