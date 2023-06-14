@@ -7,6 +7,7 @@ import { NoComponentComponent } from './no-component/no-component.component';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { FormsExampleComponent } from './forms-example/forms-example.component';
 import { MovieItemsComponent } from './movie-items/movie-items.component';
+import { RxjxExampleComponent } from './rxjx-example/rxjx-example.component';
 
 const routes: Routes = [
    {path:'',component:HomeComponentComponent},
@@ -14,6 +15,9 @@ const routes: Routes = [
   {path:'todo',component:TodolistComponent},
   {path:'forms',component:FormsExampleComponent},
   {path : 'newmovielist',component:MovieItemsComponent},
+  {
+    path:'countries',component:RxjxExampleComponent
+  },
   
 
 

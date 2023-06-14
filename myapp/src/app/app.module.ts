@@ -17,6 +17,9 @@ import { MoviecardComponent } from './moviecard/moviecard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
+import { RxjxExampleComponent } from './rxjx-example/rxjx-example.component';
+import { HttpClientModule } from  '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -30,12 +33,13 @@ import {MatInputModule} from '@angular/material/input';
     NoComponentComponent,
     HomeComponentComponent,
     MovieItemsComponent,
-    MoviecardComponent
+    MoviecardComponent,
+    RxjxExampleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule, BrowserAnimationsModule,MatButtonModule,MatInputModule
+    FormsModule,ReactiveFormsModule, BrowserAnimationsModule,MatButtonModule,MatInputModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
