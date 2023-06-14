@@ -15,6 +15,8 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { MovieItemsComponent } from './movie-items/movie-items.component';
 import { MoviecardComponent } from './moviecard/moviecard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule, BrowserAnimationsModule
+    FormsModule,ReactiveFormsModule, BrowserAnimationsModule,MatButtonModule,MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

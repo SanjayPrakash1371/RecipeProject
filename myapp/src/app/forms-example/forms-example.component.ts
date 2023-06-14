@@ -33,6 +33,8 @@ export class FormsExampleComponent {
 
   })
 
+  emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+
   constructor(private fb: FormBuilder) {}
 
   onSubmit(){
