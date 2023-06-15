@@ -19,7 +19,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { RxjxExampleComponent } from './rxjx-example/rxjx-example.component';
 import { HttpClientModule } from  '@angular/common/http';
-
+import {MatSelectModule} from '@angular/material/select';
+import { RxjxAssignComponent } from './rxjx-assign/rxjx-assign.component';
 
 @NgModule({
   declarations: [
@@ -34,12 +35,13 @@ import { HttpClientModule } from  '@angular/common/http';
     HomeComponentComponent,
     MovieItemsComponent,
     MoviecardComponent,
-    RxjxExampleComponent
+    RxjxExampleComponent,
+    RxjxAssignComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule, BrowserAnimationsModule,MatButtonModule,MatInputModule,HttpClientModule
+    FormsModule,ReactiveFormsModule, BrowserAnimationsModule,MatButtonModule,MatInputModule,HttpClientModule,MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -39,8 +39,12 @@ export class MovieItemsComponent {
     )
   }
 
-  deleteMovie(){
+  deleteMovie(id:string){
+
+    console.log("Delete Movie",id);
+
     
+
   }
 
 }

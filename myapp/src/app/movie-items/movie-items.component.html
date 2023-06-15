@@ -1,3 +1,8 @@
 <div class="movie-list-container">
-  <app-moviecard *ngFor="let m of movieList" [movie]="m"></app-moviecard>
+  <!-- <app-moviecard *ngFor="let m of movieList" [movie]="m"></app-moviecard> -->
+  <app-moviecard
+    (delete)="deleteMovie($event)"
+    *ngFor="let m of movies$ | async"
+    [movie]="m"
+  ></app-moviecard>
 </div>

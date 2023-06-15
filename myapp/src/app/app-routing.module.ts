@@ -8,6 +8,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { FormsExampleComponent } from './forms-example/forms-example.component';
 import { MovieItemsComponent } from './movie-items/movie-items.component';
 import { RxjxExampleComponent } from './rxjx-example/rxjx-example.component';
+import { RxjxAssignComponent } from './rxjx-assign/rxjx-assign.component';
 
 const routes: Routes = [
    {path:'',component:HomeComponentComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {
     path:'countries',component:RxjxExampleComponent
   },
+  {path:'assign',component:RxjxAssignComponent},
   
 
 

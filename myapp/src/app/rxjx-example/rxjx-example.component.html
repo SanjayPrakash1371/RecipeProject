@@ -1,12 +1,26 @@
 <div>
   <form [formGroup]="searchForm">
-    <input
-      type="text"
-      placeholder="Enter your Search Region"
-      formControlName="searchField"
-    />
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input
+        matInput
+        placeholder="Company name"
+        formControlName="searchField"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field class="example-full-width">
+      <mat-label>Select an option</mat-label>
+      <mat-select [(value)]="time">
+        <mat-option>None</mat-option>
+        <mat-option value="3000">3000</mat-option>
+        <mat-option value="6000">6000</mat-option>
+        <mat-option value="12000">9000</mat-option>
+      </mat-select>
+    </mat-form-field>
   </form>
   <p>{{ ans }}</p>
+  <p>{{ time }}</p>
   <!-- <ul *ngFor="let c of countries">
     <li>{{ c?.name?.common }}</li>
   </ul> -->
