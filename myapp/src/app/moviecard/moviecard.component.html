@@ -5,6 +5,10 @@
     <p>⭐ {{ movie.rating }}</p>
   </div>
   <button (click)="toggle()">Toggle Button</button>
+  <button mat-icon-button color="primary" (click)="toggle()">
+    <mat-icon *ngIf="show">expand_less</mat-icon>
+    <mat-icon *ngIf="!show">expand_more</mat-icon>
+  </button>
   <button (click)="details(movie.id)">Details</button>
   <button (click)="edit(movie.id)">Edit</button>
   <p *ngIf="show" class="movie-summary">{{ movie.summary }}</p>

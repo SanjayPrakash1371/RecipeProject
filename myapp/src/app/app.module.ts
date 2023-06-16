@@ -15,14 +15,15 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { MovieItemsComponent } from './movie-items/movie-items.component';
 import { MoviecardComponent } from './moviecard/moviecard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
 import { RxjxExampleComponent } from './rxjx-example/rxjx-example.component';
-import { HttpClientModule } from  '@angular/common/http';
-import {MatSelectModule} from '@angular/material/select';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSelectModule } from '@angular/material/select';
 import { RxjxAssignComponent } from './rxjx-assign/rxjx-assign.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { MovieeditComponent } from './movieedit/movieedit.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -40,14 +41,21 @@ import { MovieeditComponent } from './movieedit/movieedit.component';
     RxjxExampleComponent,
     RxjxAssignComponent,
     MovieDetailsComponent,
-    MovieeditComponent
+    MovieeditComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule, BrowserAnimationsModule,MatButtonModule,MatInputModule,HttpClientModule,MatSelectModule
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatInputModule,
+    HttpClientModule,
+    MatSelectModule,
+    MatIconModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

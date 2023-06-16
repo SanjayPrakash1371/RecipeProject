@@ -37,6 +37,7 @@ export class MovieeditComponent {
   ngOnInit() {
     this.arouter.paramMap.subscribe((router) => {
       let movieId = router.get('id');
+      console.log(movieId, 'sanjay');
       this.movieService
         .getMoviesById(movieId as string)
         .subscribe((data: any) => {
