@@ -9,11 +9,11 @@ import {
 } from 'rxjs';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  selector: 'app-home-component',
+  templateUrl: './home-component.component.html',
+  styleUrls: ['./home-component.component.scss'],
 })
-export class AppComponent {
+export class HomeComponentComponent {
   title = 'rproject';
 
   constructor(private fb: FormBuilder, private http: HttpClient) {}

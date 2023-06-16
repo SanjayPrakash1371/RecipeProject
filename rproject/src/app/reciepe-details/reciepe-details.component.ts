@@ -23,6 +23,8 @@ export class ReciepeDetailsComponent {
     private arouter: ActivatedRoute
   ) {}
   recipe: any;
+  imgSrc: string = '';
+  summary: string = '';
   ngOnInit() {
     this.arouter.paramMap.subscribe((router) => {
       let receipeId = router.get('id');
@@ -37,9 +39,12 @@ export class ReciepeDetailsComponent {
           })
         )
         .subscribe((val) => {
-          console.log(val);
+          // console.log(val);
 
           this.recipe = val;
+          console.log(this.recipe['id'], 'sanjay');
+          this.imgSrc = this.recipe['img'];
+          this.summary = this.recipe['instructions'];
         });
     });
   }

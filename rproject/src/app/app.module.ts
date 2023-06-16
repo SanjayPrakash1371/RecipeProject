@@ -8,9 +8,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FavoComponent } from './favo/favo.component';
 import { ReciepeDetailsComponent } from './reciepe-details/reciepe-details.component';
+import { HomeComponentComponent } from './home-component/home-component.component';
 
 @NgModule({
-  declarations: [AppComponent, RecipecardComponent, FavoComponent, ReciepeDetailsComponent],
+  declarations: [AppComponent, RecipecardComponent, FavoComponent, ReciepeDetailsComponent, HomeComponentComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

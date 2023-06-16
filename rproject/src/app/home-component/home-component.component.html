@@ -1,4 +1,4 @@
-<!-- <nav>
+<nav>
   <ul class="nav-links">
     <li><a routerLink="favo">Favorites</a></li>
   </ul>
@@ -16,9 +16,9 @@
   <div *ngIf="show">
     <ul *ngFor="let r of reciepes">
       <li>{{ r.name }}</li>
-      <li>{{ r.id }}</li> -->
-<!-- <app-recipecard [recipe]="r"></app-recipecard>
+      <!-- <li>{{ r.id }}</li> -->
+      <app-recipecard [recipe]="r"></app-recipecard>
     </ul>
   </div>
-</nav> -->
+</nav>
 <router-outlet></router-outlet>
