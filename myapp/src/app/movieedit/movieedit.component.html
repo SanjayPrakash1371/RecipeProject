@@ -4,8 +4,8 @@
       <mat-label>Movie Name</mat-label>
       <input matInput placeholder="Movie Name" formControlName="name" />
       <!-- <div
-        *ngIf="movieName?.hasError('invalid') && movieName?.hasError('touched')"
-      > -->
+          *ngIf="movieName?.hasError('invalid') && movieName?.hasError('touched')"
+        > -->
       <mat-error *ngIf="name?.hasError('required')">Required</mat-error>
     </mat-form-field>
   </div>
@@ -18,9 +18,9 @@
     </mat-form-field>
     <!-- {{ poster?.errors | json }} -->
     <!-- <div *ngIf="poster?.hasError('invalid') && poster?.hasError('touched')">
-      <mat-error *ngIf="poster?.hasError('required')">Required</mat-error>
-      <mat-error *ngIf="poster?.hasError('pattern')">Invalid</mat-error>
-    </div> -->
+        <mat-error *ngIf="poster?.hasError('required')">Required</mat-error>
+        <mat-error *ngIf="poster?.hasError('pattern')">Invalid</mat-error>
+      </div> -->
   </div>
 
   <div class="form-fields">
@@ -37,10 +37,10 @@
       <mat-error *ngIf="rating?.hasError('min')">Minimum 1</mat-error>
     </mat-form-field>
     <!-- <div *ngIf="rating?.hasError('invalid') && !rating?.hasError('touched')">
-      <mat-error *ngIf="rating?.hasError('required')">Required</mat-error>
-      <mat-error *ngIf="rating?.hasError('max')">Maximum 10</mat-error>
-      <mat-error *ngIf="rating?.hasError('min')">Minimum 1</mat-error>
-    </div> -->
+        <mat-error *ngIf="rating?.hasError('required')">Required</mat-error>
+        <mat-error *ngIf="rating?.hasError('max')">Maximum 10</mat-error>
+        <mat-error *ngIf="rating?.hasError('min')">Minimum 1</mat-error>
+      </div> -->
   </div>
   <div class="form-fields">
     <mat-form-field class="example-full-width">
@@ -50,10 +50,10 @@
       <mat-error *ngIf="summary?.hasError('minlength')">Minimum 10</mat-error>
     </mat-form-field>
     <!-- <div *ngIf="summary?.hasError('invalid') && summary?.hasError('touched')">
-      <mat-error *ngIf="summary?.errors?.['required']">Required</mat-error>
-      <mat-error *ngIf="summary?.hasError('required')">Required</mat-error>
-      <mat-error *ngIf="summary?.hasError('minlength')">Minimum 10</mat-error>
-    </div> -->
+        <mat-error *ngIf="summary?.errors?.['required']">Required</mat-error>
+        <mat-error *ngIf="summary?.hasError('required')">Required</mat-error>
+        <mat-error *ngIf="summary?.hasError('minlength')">Minimum 10</mat-error>
+      </div> -->
   </div>
   <div class="form-fields">
     <mat-form-field class="example-full-width">
@@ -61,10 +61,10 @@
       <input matInput placeholder="Summary" formControlName="trailer" />
     </mat-form-field>
     <!-- <div *ngIf="summary?.hasError('invalid') && summary?.hasError('touched')">
-      <mat-error *ngIf="summary?.errors?.['required']">Required</mat-error>
-      <mat-error *ngIf="summary?.hasError('required')">Required</mat-error>
-      <mat-error *ngIf="summary?.hasError('minlength')">Minimum 10</mat-error>
-    </div> -->
+        <mat-error *ngIf="summary?.errors?.['required']">Required</mat-error>
+        <mat-error *ngIf="summary?.hasError('required')">Required</mat-error>
+        <mat-error *ngIf="summary?.hasError('minlength')">Minimum 10</mat-error>
+      </div> -->
   </div>
 
   <div class="form-fields">
@@ -78,23 +78,23 @@
     </button>
   </div>
   <!-- <mat-form-field class="example-full-width">
-    <mat-label>Email</mat-label>
-    <input
-      type="email"
-      matInput
-      [formControl]="emailFormControl"
-      placeholder="Ex. pat@example.com"
-    />
-    <mat-error
-      *ngIf="
-        emailFormControl.hasError('email') &&
-        !emailFormControl.hasError('required')
-      "
-    >
-      Please enter a valid email address
-    </mat-error>
-    <mat-error *ngIf="emailFormControl.hasError('required')">
-      Email is <strong>required</strong>
-    </mat-error>
-  </mat-form-field> -->
+      <mat-label>Email</mat-label>
+      <input
+        type="email"
+        matInput
+        [formControl]="emailFormControl"
+        placeholder="Ex. pat@example.com"
+      />
+      <mat-error
+        *ngIf="
+          emailFormControl.hasError('email') &&
+          !emailFormControl.hasError('required')
+        "
+      >
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="emailFormControl.hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field> -->
 </form>

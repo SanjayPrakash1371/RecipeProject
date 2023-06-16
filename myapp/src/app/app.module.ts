@@ -21,6 +21,8 @@ import { RxjxExampleComponent } from './rxjx-example/rxjx-example.component';
 import { HttpClientModule } from  '@angular/common/http';
 import {MatSelectModule} from '@angular/material/select';
 import { RxjxAssignComponent } from './rxjx-assign/rxjx-assign.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { MovieeditComponent } from './movieedit/movieedit.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { RxjxAssignComponent } from './rxjx-assign/rxjx-assign.component';
     MovieItemsComponent,
     MoviecardComponent,
     RxjxExampleComponent,
-    RxjxAssignComponent
+    RxjxAssignComponent,
+    MovieDetailsComponent,
+    MovieeditComponent
   ],
   imports: [
     BrowserModule,

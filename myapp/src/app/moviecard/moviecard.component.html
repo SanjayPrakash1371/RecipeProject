@@ -5,6 +5,8 @@
     <p>⭐ {{ movie.rating }}</p>
   </div>
   <button (click)="toggle()">Toggle Button</button>
+  <button (click)="details(movie.id)">Details</button>
+  <button (click)="edit(movie.id)">Edit</button>
   <p *ngIf="show" class="movie-summary">{{ movie.summary }}</p>
   <div class="">
     <app-counter></app-counter>

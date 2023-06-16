@@ -1,8 +1,10 @@
+<!-- <app-forms-example (formData)="addMovie($event)"></app-forms-example> -->
 <div class="movie-list-container">
   <!-- <app-moviecard *ngFor="let m of movieList" [movie]="m"></app-moviecard> -->
+
   <app-moviecard
     (delete)="deleteMovie($event)"
-    *ngFor="let m of movies$ | async"
+    *ngFor="let m of movies$ | async; trackBy: trackByFunction"
     [movie]="m"
   ></app-moviecard>
 </div>

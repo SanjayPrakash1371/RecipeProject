@@ -1,4 +1,5 @@
 <form [formGroup]="searchForm">
+  <label> Country : </label>
   <select formControlName="searchField1">
     <option>ae</option>
 
@@ -6,9 +7,10 @@
 
     <option>in</option>
 
-    <option>usa</option>
+    <option>us</option>
   </select>
-
+  <br />
+  <label> Category : </label>
   <select formControlName="searchField2">
     <option>buisness</option>
 
@@ -20,4 +22,4 @@
   </select>
 </form>
 
-<!-- <p *ngFor="let n of ans">{{ n.t }}</p> -->
+<p *ngFor="let n of ans2">{{ n }}</p>

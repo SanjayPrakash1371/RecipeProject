@@ -6,45 +6,49 @@ import {
   Validators,
 } from '@angular/forms';
 import { MovieserviceService } from '../movieservice.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-forms-example',
-  templateUrl: './forms-example.component.html',
-  styleUrls: ['./forms-example.component.scss'],
+  selector: 'app-movieedit',
+  templateUrl: './movieedit.component.html',
+  styleUrls: ['./movieedit.component.scss'],
 })
-export class FormsExampleComponent {
-  // newForm= new FormGroup({
-
-  //   username: new FormControl('',Validators.required),
-  //   age:new FormControl('',[Validators.required, Validators.min(18),Validators.max(30)])
-
-  // })
-
-  // movieForm = new FormGroup({
-
-  //   movieName : new FormControl('',Validators.required),
-  //   poster : new FormControl('',Validators.required),
-  //   rating : new FormControl('',[Validators.required, Validators.max(10)]),
-  //   summary : new FormControl('',[Validators.required, Validators.minLength(10)])
-
-  // })
+export class MovieeditComponent {
   urlregex =
     /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
   movieForm = this.fb.group({
-    name: ['', Validators.required],
+    name: ['', [Validators.required]],
     poster: ['', [Validators.required, Validators.pattern(this.urlregex)]],
     rating: ['', [Validators.required, Validators.max(10), Validators.min(1)]],
     summary: ['', [Validators.required, Validators.minLength(10)]],
     trailer: [''],
   });
 
+  // emailFormControl = new FormControl('', [Validators.required, Validators.email]);
+
   constructor(
     private fb: FormBuilder,
     private movieService: MovieserviceService,
-    private router: Router
+    private router: Router,
+    private arouter: ActivatedRoute
   ) {}
-  @Output() formData = new EventEmitter<FormGroup>();
+
+  id: string = '';
+  ngOnInit() {
+    this.arouter.paramMap.subscribe((router) => {
+      let movieId = router.get('id');
+      this.movieService
+        .getMoviesById(movieId as string)
+        .subscribe((data: any) => {
+          this.id = data.id;
+          this.movieForm.patchValue(data);
+          //    this.presentData = data;
+
+          // console.log(this.id);
+        });
+    });
+  }
+
   onSubmit() {
     // console.log(this.newForm.status);
 
@@ -53,11 +57,11 @@ export class FormsExampleComponent {
     console.log(this.movieForm.status);
 
     if (this.movieForm.valid) {
-      // console.log(this.movieForm.value);
-      //this.formData.emit(this.movieForm);
-      let newMovie = this.movieForm;
+      console.log(this.movieForm.value);
+
+      let updated = this.movieForm;
       this.movieService
-        .addMovie(newMovie as any)
+        .updateMovie(this.id, updated as any)
         .subscribe(() => this.router.navigate(['/newmovielist']));
     }
   }

@@ -9,28 +9,28 @@ import { FormsExampleComponent } from './forms-example/forms-example.component';
 import { MovieItemsComponent } from './movie-items/movie-items.component';
 import { RxjxExampleComponent } from './rxjx-example/rxjx-example.component';
 import { RxjxAssignComponent } from './rxjx-assign/rxjx-assign.component';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { MovieeditComponent } from './movieedit/movieedit.component';
 
 const routes: Routes = [
-   {path:'',component:HomeComponentComponent},
-  {path:'movies',component:MovielistComponent},
-  {path:'todo',component:TodolistComponent},
-  {path:'forms',component:FormsExampleComponent},
-  {path : 'newmovielist',component:MovieItemsComponent},
+  { path: '', component: HomeComponentComponent },
+  { path: 'movies', component: MovielistComponent },
+  { path: 'todo', component: TodolistComponent },
+  { path: 'forms', component: FormsExampleComponent },
+  { path: 'newmovielist', component: MovieItemsComponent },
   {
-    path:'countries',component:RxjxExampleComponent
+    path: 'countries',
+    component: RxjxExampleComponent,
   },
-  {path:'assign',component:RxjxAssignComponent},
-  
+  { path: 'assign', component: RxjxAssignComponent },
+  { path: 'movies/:id', component: MovieDetailsComponent },
+  { path: 'edit/:id', component: MovieeditComponent },
 
-
-  
-  {path:'**',component:NoComponentComponent},
-  
-  
+  { path: '**', component: NoComponentComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
